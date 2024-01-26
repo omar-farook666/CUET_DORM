@@ -1,4 +1,3 @@
-
 import { Empty, Result, Skeleton } from 'antd';
 import axios from 'axios';
 import getConfig from 'next/config';
@@ -25,7 +24,7 @@ function Rooms(props) {
   }, [props]);
 
   return (
-    <MainLayout title='Beach Resort ― Rooms'>
+    <MainLayout title='CUET Dorm - Rooms'>
       <Hero hero='roomsHero'>
         <Banner title='our rooms'>
           <Link className='btn-primary' href='/'>

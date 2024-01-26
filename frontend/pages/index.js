@@ -13,7 +13,7 @@ const { publicRuntimeConfig } = getConfig();
 
 function Home(props) {
   return (
-    <MainLayout title='Beach Resort ― Home'>
+    <MainLayout title='CUET Dorm - Home'>
       <Hero>
         <Banner
           title='Dormitory Reservation System for Teachers and Staffs'

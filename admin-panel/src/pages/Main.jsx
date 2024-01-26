@@ -14,8 +14,7 @@ import {
   Button, Layout, Menu, Tooltip
 } from 'antd';
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
-import Logo from '../assets/images/logo.svg';
+import { useNavigate, useParams } from 'react-router-dom';
 import UserBox from '../components/shared/UserBox';
 import Dashboard from '../components/tabs/Dashboard';
 import MyProfile from '../components/tabs/MyProfile';
@@ -32,7 +31,7 @@ const {
 } = Layout;
 
 function Main() {
-  window.document.title = 'Beach Resort — Main';
+  window.document.title = 'Admin Panel — Main';
   const { isFullscreen, toggleFullScreen } = useFullScreen();
   const [selectedKeys, setSelectedKeys] = useState('1');
   const navigate = useNavigate();
@@ -201,13 +200,13 @@ function Main() {
 
       <Layout>
         <Header className='p-0 !bg-bg-white'>
-          <Link to='/'>
+          {/* <Link to='/'>
             <img
               className='w-[280px] h-[65px] mx-auto'
               alt='beach-resort-logo'
               src={Logo}
             />
-          </Link>
+          </Link> */}
 
           {/* full screen toggle button */}
           <Tooltip title='Click to toggle Full Screen' placement='left'>
@@ -233,16 +232,9 @@ function Main() {
         </Content>
 
         <Footer className='text-center font-text-font font-medium '>
-          ©2023 Beach Resort — Developed By
-          {' '}
-          <a
-            className='text-color-primary hover:text-color-secondary'
-            href='http://www.samiurrahmanmukul.epizy.com'
-            target='_blank'
-            rel='noreferrer'
-          >
-            Samiur Rahman Mukul
-          </a>
+          <p>
+            ©2024 Dormitory Rervation System By 1804111, 1804125, 1804129
+          </p>
         </Footer>
       </Layout>
     </Layout>

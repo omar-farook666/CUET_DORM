@@ -205,9 +205,10 @@ exports.createRoom = async (req, res) => {
       room
     ));
   } catch (error) {
-    for (const element of req.files) {
+    for (const element of req.file) {
       fs.unlink(`${appRoot}/public/uploads/rooms/${element.filename}`, (err) => {
-        if (err) { logger.error(err); }
+        if (err) { logger.error(err);
+        logger.error("error occured") }
       });
     }
 

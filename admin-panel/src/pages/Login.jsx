@@ -13,13 +13,13 @@ import {
 } from 'antd';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Logo from '../assets/images/logo.svg';
+import Logo from '../assets/images/chittagong-university-of-engineering-and-technolog-logo.png';
 import useTimeout from '../hooks/useTimeout';
 import ApiService from '../utils/apiService';
 import { setSessionUserAndToken } from '../utils/authentication';
 
 function Login() {
-  window.document.title = 'Beach Resort — Login';
+  window.document.title = 'Admin — Login';
   const [loading, setLoading] = useState(false);
   const [errMsg, setErrMsg] = useState('');
 
@@ -35,6 +35,7 @@ function Login() {
     try {
       setLoading(true);
       const response = await ApiService.post('/api/v1/auth/login?loginType=admin', values);
+      console.log(response);
 
       if (response?.result_code === 0) {
         setSessionUserAndToken(response?.result?.data, response?.access_token, response?.refresh_token);
@@ -42,12 +43,12 @@ function Login() {
         setLoading(false);
       } else {
         setErrMsg('Sorry! Something went wrong. App server error');
-        console.log(values);
+        console.log(result_code);
         setLoading(false);
       }
       setLoading(false);
     } catch (error) {
-      setErrMsg(error?.response?.data?.result?.error || 'Sorry! Something went wrong. App server error');
+      setErrMsg(error?.response?.data?.result?.error || 'Something went wrong. App server error');
       console.log(values);
       setLoading(false);
     }
@@ -58,7 +59,7 @@ function Login() {
       <div className='w-[90%] md:w-[450px]'>
         <Link to='/'>
           <img
-            className='w-[280px] h-[65px] mx-auto'
+            className='mx-auto'
             alt='beach-resort-logo'
             src={Logo}
           />
@@ -68,7 +69,7 @@ function Login() {
         {errMsg && <Alert message={errMsg} type='error' className='!text-center' />}
 
         <Form
-          name='beach-resort-login'
+          name='admin-login'
           className='login-form mt-5'
           initialValues={{ remember: true }}
           onFinish={onFinish}

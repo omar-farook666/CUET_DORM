@@ -76,7 +76,9 @@ function Profile() {
             ]}
           />
         </div>
+
       </MainLayout>
+
     </PrivateRoute>
   );
 }

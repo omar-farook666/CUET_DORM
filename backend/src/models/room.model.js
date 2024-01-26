@@ -70,11 +70,11 @@ const roomsSchema = new mongoose.Schema({
     required: [true, 'Room status filed is required'],
     default: 'available'
   },
-  created_by: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Users',
-    required: [true, 'Room created by is required field']
-  },
+  // created_by: {
+  //   type: mongoose.Schema.Types.ObjectId,
+  //   ref: 'Users',
+  //   required: [true, 'Room created by is required field']
+  // },
   createdAt: {
     type: Date,
     default: Date.now

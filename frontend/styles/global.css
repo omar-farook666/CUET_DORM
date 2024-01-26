@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Fira Code', monospace;
 }
 :root {
   --primaryColor: #af9a7d;
@@ -542,7 +543,6 @@ h6 {
 
 /* start of footer style */
 .footer {
-  padding: 20px 0px;
   text-align: center;
   background-color: var(--mainBlack);
 }
