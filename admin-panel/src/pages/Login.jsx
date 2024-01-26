@@ -42,11 +42,13 @@ function Login() {
         setLoading(false);
       } else {
         setErrMsg('Sorry! Something went wrong. App server error');
+        console.log(values);
         setLoading(false);
       }
       setLoading(false);
     } catch (error) {
       setErrMsg(error?.response?.data?.result?.error || 'Sorry! Something went wrong. App server error');
+      console.log(values);
       setLoading(false);
     }
   };

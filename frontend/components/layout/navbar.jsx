@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import { FaAlignRight } from 'react-icons/fa';
+import cuetLogo from '../../public/images/jpeg/chittagong-university-of-engineering-and-technolog-logo.png';
 import { getSessionToken, getSessionUser } from '../../utils/authentication';
 import UserPopover from './popover';
 
@@ -18,7 +19,7 @@ function Navbar() {
         <div className='nav-header'>
           {/* app logo */}
           <Link href='/'>
-            <img src='/images//svg/logo.svg' alt='Reach Resort' />
+            <img src={cuetLogo} alt='cuet-logo' />
           </Link>
 
           {/* navbar toggle button */}

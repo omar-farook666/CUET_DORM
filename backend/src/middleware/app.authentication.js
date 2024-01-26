@@ -18,6 +18,7 @@ exports.isAuthenticatedUser = async (req, res, next) => {
     const { authorization } = req.headers;
 
     if (!authorization) {
+      console.log(authorization)
       return res.status(403).json(errorResponse(
         3,
         'ACCESS FORBIDDEN',

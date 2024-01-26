@@ -1,4 +1,3 @@
-
 import { Empty, Result, Skeleton } from 'antd';
 import axios from 'axios';
 import getConfig from 'next/config';
@@ -17,11 +16,11 @@ function Home(props) {
     <MainLayout title='Beach Resort ― Home'>
       <Hero>
         <Banner
-          title='luxurious rooms'
-          subtitle='deluxe rooms starting at $299'
+          title='Dormitory Reservation System for Teachers and Staffs'
+          subtitle=''
         >
           <Link href='/rooms' className='btn-primary'>
-            our rooms
+            View Rooms
           </Link>
         </Banner>
       </Hero>
