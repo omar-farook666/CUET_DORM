@@ -122,31 +122,31 @@ function Main() {
   useEffect(() => {
     switch (selectedKeys) {
       case '1': {
-        window.document.title = 'Beach Resort — Dashboard';
+        window.document.title = 'Dorm Reservation — Dashboard';
         break;
       }
       case '2': {
-        window.document.title = 'Beach Resort — Users';
+        window.document.title = 'Dorm Reservation — Users';
         break;
       }
       case '3': {
-        window.document.title = 'Beach Resort — Hotel Rooms';
+        window.document.title = 'Dorm Reservation — Rooms';
         break;
       }
       case '4': {
-        window.document.title = 'Beach Resort — Booking Orders';
+        window.document.title = 'Dorm Reservation — Reservations';
         break;
       }
       case '5': {
-        window.document.title = 'Beach Resort — Profile';
+        window.document.title = 'Dorm Reservation — Profile';
         break;
       }
       case '6': {
-        window.document.title = 'Beach Resort — Logout';
+        window.document.title = 'Dorm Reservation — Logout';
         break;
       }
       default: {
-        window.document.title = 'Beach Resort — Dashboard';
+        window.document.title = 'Dorm Reservation — Dashboard';
       }
     }
   }, [selectedKeys]);

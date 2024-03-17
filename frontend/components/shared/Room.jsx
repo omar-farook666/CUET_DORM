@@ -8,11 +8,12 @@ function Room({ room }) {
         <img src={room?.room_images[0]?.url || '/img/jpeg/room-1.jpeg'} alt='single room' />
 
         <div className='price-top'>
-          <h6>{`$ ${room?.room_price}`}</h6>
-          <p>per night</p>
+          <h6>{`৳ ${room?.room_price}`}</h6>
+          <p>per month</p>
         </div>
 
         <Link className='btn-primary room-link' href={`/rooms/${room?.room_slug}`}>
+          {console.log(room.id)}
           Feature
         </Link>
       </div>

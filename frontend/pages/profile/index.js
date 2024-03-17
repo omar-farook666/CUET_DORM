@@ -42,7 +42,7 @@ function Profile() {
 
   return (
     <PrivateRoute>
-      <MainLayout title='Beach Resort ― My Profile'>
+      <MainLayout title='Dorm Reservation ― My Profile'>
         <div className='profile-container'>
           <Tabs
             tabPosition='left'

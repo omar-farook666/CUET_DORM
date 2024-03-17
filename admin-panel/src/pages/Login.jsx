@@ -34,7 +34,9 @@ function Login() {
   const onFinish = async (values) => {
     try {
       setLoading(true);
+      console.log('try');
       const response = await ApiService.post('/api/v1/auth/login?loginType=admin', values);
+      console.log('try2');
       console.log(response);
 
       if (response?.result_code === 0) {
@@ -49,7 +51,7 @@ function Login() {
       setLoading(false);
     } catch (error) {
       setErrMsg(error?.response?.data?.result?.error || 'Something went wrong. App server error');
-      console.log(values);
+      console.log(error);
       setLoading(false);
     }
   };

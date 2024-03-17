@@ -22,10 +22,13 @@ ApiService.interceptors.request.use(
     /**
      * Add your request interceptor logic here: setting headers, authorization etc.
      */
+
     config.headers['Content-Type'] = 'application/json';
 
     if (!config?.noAuth) {
+      console.log('apiService');
       const token = getSessionToken();
+      console.log(token);
       if (token) {
         config.headers.Authorization = `Bearer ${token}`;
       }
@@ -50,6 +53,7 @@ ApiService.interceptors.response.use(
   */
   async (error) => {
     const originalRequest = error.config;
+    console.log(error);
 
     if (error?.response?.data?.result_code === 11) {
       // if authorized to logout user and redirect login page

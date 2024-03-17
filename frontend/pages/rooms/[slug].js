@@ -1,4 +1,3 @@
-
 import { Button } from 'antd';
 import axios from 'axios';
 import getConfig from 'next/config';
@@ -37,7 +36,7 @@ function RoomPreview(props) {
 
   return (
     <>
-      <MainLayout title='Beach Resort ― Rooms Preview'>
+      <MainLayout title='Dorm Reservation ― Rooms Preview'>
         {!props?.room && !props?.error ? (
           <Loading />
         ) : props?.error ? (
@@ -147,14 +146,15 @@ export async function getServerSideProps(ctx) {
     return {
       props: {
         room,
-        error: null
+        error: null // Set error to null if there is no error
       }
     };
   } catch (err) {
+    const errorMessage = err.response?.data?.message || 'Something went wrong';
     return {
       props: {
         room: null,
-        error: err?.data
+        error: errorMessage // Set error message if there is an error
       }
     };
   }

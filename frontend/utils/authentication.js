@@ -29,6 +29,7 @@ export const getSessionUser = () => {
  * @returns if session user return access-token otherwise return null
  */
 export const getSessionToken = () => {
+  console.log('accessToken');
   const tokenStr = localStorage.getItem(APP_ACCESS_TOKEN);
 
   if (tokenStr) {

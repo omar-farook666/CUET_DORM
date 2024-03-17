@@ -42,7 +42,7 @@ function ForgotPassword() {
 
   return (
     <PublicRoute>
-      <MainLayout title='Beach Resort ― Forgot Password'>
+      <MainLayout title='Dorm Reservation ― Forgot Password'>
         <div style={{ width: '400px', height: 'calc(100vh - 205px)', margin: '0 auto' }}>
           <Form
             form={form}
